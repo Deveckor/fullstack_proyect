@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kodemia</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <h2 class="title">Base de datos kodemia</h2>
+    <section class="btn-get">
+        <button id="btnK" class="btn-koders">Koders</button>
+        <button id="btnM" class="btn-mentors">Mentors</button>
+    </section>
+    <div id="sectionForm" >
+
+    </div>
+    <table id="table">
+
+    </table>
+    <template id="formKoder">
+        <form action="" class="section-form">
+            <label for="nombre">Nombre:
+                <input type="text" name="nombre" id="nombre">
+            </label>
+            <label for="lastName">Apellido:
+                <input type="text" name="apellido" id="lastName">
+            </label>
+            <label for="age">Edad:
+                <input type="number" name="age" id="age">
+            </label>
+            <label for="gender">Genero:
+                <select name="gender" id="gender">
+                    <option value=""></option>
+                    <option value="f">F</option>
+                    <option value="m">M</option>
+                </select>
+            </label>
+            <div class="botonera">
+                <button id="btn-Agregar-k" >Agregar</button>
+                <button id="btn-Modificar-k" disabled="true" >Modificar</button>
+            </div>
+        </form>
+    </template>
+    <template id="formMentor" >
+        <form action="" class="section-form">
+            <label for="nombre">Nombre:
+                <input type="text" name="nombre" id="name">
+            </label>
+            <label for="module">Modulo:
+                <input type="text" name="module" id="module">
+            </label>
+            <label for="gender">Genero:
+                <select name="gender" id="gender">
+                    <option value="0"></option>
+                    <option value="f">F</option>
+                    <option value="m">M</option>
+                </select>
+            </label>
+            <div class="botonera">
+                <button id="btn-Agregar-m" >Agregar</button>
+                <button id="btn-Modificar-m" disabled="true">Modificar</button>
+            </div>
+        </form>
+    </template>
+    <template id="table-koder">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Genero</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="name"></td>
+                <td class="lastName"></td>
+                <td class="age"></td>
+                <td class="gender"></td>
+                <td>
+                    <button class="edit-k">Editar</button>
+                    <button class="delete-k">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </template>
+    <template id="table-mentors">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Genero</th>
+                <th>Modulo</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="name"></td>
+                <td class="module"></td>
+                <td class="gender"></td>
+                <td>
+                    <button class="edit-m">Editar</button>
+                    <button class="delete-m">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </template>
+    <script src="./js/index.js"></script>
+</body>
+</html>
