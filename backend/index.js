@@ -10,7 +10,12 @@ const connection = koderRoutes.connect;
 
 
 
-
+// app.use(bodyParser.json());
+// app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json())
+app.use(cors());
+app.use('/koders', koders);
+app.use('/mentors' , mentors)
 
 app.listen(port, async (req, res) => {
         await connection();
@@ -22,12 +27,7 @@ app.listen(port, async (req, res) => {
 
 
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(express.json())
-app.use(cors());
-app.use('/koders', koders);
-app.use('/mentors' , mentors)
+
 
     
 
